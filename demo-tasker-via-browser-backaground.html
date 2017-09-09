@@ -21,7 +21,7 @@ span {display: block;overflow: hidden;padding-left:5px;vertical-align:middle;}
 .search.icon {color: #666666; width: 12px; height: 12px; border: solid 2px currentColor; border-radius: 100%; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); text-align: center; margin: auto; } .search.icon:before {content: ''; position: absolute; top: 10px; left: 3px; height: 5px; width: 2px; background-color: currentColor; }
 img.smaller{width: 80px; max-width:86px; border-radius: 50%; min-width:80px;height: 80px;min-height:80px; object-fit: cover; max-height:50%;}
 #content{position: absolute; top: 20%; max-width: 600px;width: 100%;}
-.search_bar{display:table; vertical-align:middle;width:90%;height:42px;max-width:600px;margin:0 auto; margin-top: 15px; background: white;box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);}
+.search_bar{display:table; vertical-align:middle;width:90%;height:42px;max-width:600px;margin:0 auto; margin-top: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.3);}
 #search_input{color: #6c6c6c;}
 #search_submit{display: none;outline:none;height:42px; width: 42px; float:right;color: #666666;font-size:15px; font-weight:bold; border:none; background-color:transparent; padding: 0 10px 0 10px;}
 .box {position:relative;display: inline-block;width: 75px;border: 0;}
@@ -56,7 +56,7 @@ var img = document.getElementById('pic');
 var colorThief = new ColorThief();
 var colorRGB = colorThief.getColor(img);
 document.body.style.backgroundColor = "rgb(" + colorRGB + ")";
-
+console.log(colorRGB);
 
 function showButton() {document.getElementById("search_submit").style.display = "block"; } function hideButton() {var key = document.getElementById("search_input").value; if (key == "") {document.getElementById("search_submit").style.display = "none"; } } function search(){var key = document.getElementById("search_input").value; if(key != ""){window.via.searchText(key); document.getElementById("search_input").value = ""; } return false; }
 </script>
