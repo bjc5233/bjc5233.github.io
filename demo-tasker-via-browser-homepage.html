@@ -6,11 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 <title>主页</title>
 </head>
-<script src="color-thief.min.js"></script>
 <style>
 * {padding: 0; margin: 0; box-sizing:border-box;}
 html{ -webkit-tap-highlight-color:rgba(0,0,0,0);height:100%; min-height:100%; }
-body {min-height:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size:cover; max-width:100%; width: 600px;margin: auto;text-align: center;}
+body {min-height:100%; background-color: rgb(217,208,175); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size:cover; max-width:100%; width: 600px;margin: auto;text-align: center;}
 #search_input{height:42px;width:95%;outline:none;border:none;font-size: 15px;background-color:transparent;color: #FFFFFF;}
 .search_part{margin-bottom:20px;}
 span {display: block;overflow: hidden;padding-left:5px;vertical-align:middle;}
@@ -60,17 +59,7 @@ Flowers are so inconsistent! But I was too young to know how to love her…
 </div>
 
 
-
-
-
-
 <script type="text/javascript">
-var img = document.getElementById('pic');
-var colorThief = new ColorThief();
-var colorRGB = colorThief.getColor(img);
-document.body.style.backgroundColor = "rgb(" + colorRGB + ")";
-console.log(colorRGB);
-
 function showButton() {document.getElementById("search_submit").style.display = "block"; } function hideButton() {var key = document.getElementById("search_input").value; if (key == "") {document.getElementById("search_submit").style.display = "none"; } } function search(){var key = document.getElementById("search_input").value; if(key != ""){window.via.searchText(key); document.getElementById("search_input").value = ""; } return false; }
 </script>
 
